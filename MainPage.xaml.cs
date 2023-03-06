@@ -22,14 +22,82 @@ namespace MyFirstGUIApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        int result;
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button1_Click(object sender, RoutedEventArgs e)
         {
-           
+            int a = Int32.Parse(textBox1.Text);
+            int b= Int32.Parse(textBox2.Text);
+             result = a+b;
+            textBlock.Text=result.ToString();
+            decimalRadioButton.IsChecked = true;
+
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            int a = Int32.Parse(textBox1.Text);
+            int b = Int32.Parse(textBox2.Text);
+             result = a - b;
+            textBlock.Text = result.ToString();
+            decimalRadioButton.IsChecked = true;
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            int a = Int32.Parse(textBox1.Text);
+            int b = Int32.Parse(textBox2.Text);
+             result = a * b;
+            textBlock.Text = result.ToString();
+            decimalRadioButton.IsChecked = true;
+        }
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            int a = Int32.Parse(textBox1.Text);
+            int b = Int32.Parse(textBox2.Text);
+            if (result != 0)
+                result = a / b;
+            else textBlock.Text = "Ne moze se dijeliti s 0";
+            textBlock.Text = result.ToString();
+            decimalRadioButton.IsChecked= true;
+        }
+
+        private void decimalRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+            if (decimalRadioButton.IsChecked == true)
+            {
+                textBlock.Text = Convert.ToString(result, 10);
+                
+            }
+        }
+
+        private void hexadecimalRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (hexadecimalRadioButton.IsChecked == true)
+            {
+                textBlock.Text = Convert.ToString(result, 16);
+            }
+        }
+
+        private void octalRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (octalRadioButton.IsChecked == true)
+            {
+                textBlock.Text = Convert.ToString(result, 8);
+            }
+        }
+
+        private void binaryRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (binaryRadioButton.IsChecked == true)
+            {
+                textBlock.Text = Convert.ToString(result, 2);
+            }
         }
     }
 }

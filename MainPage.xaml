@@ -9,15 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="Button1" Content="+" Margin="453,248,0,0" VerticalAlignment="Top" Height="127" Width="151" Click="Button_Click" FontSize="70"/>
-        <Button x:Name="Button2" Content="-" Margin="453,373,0,0" VerticalAlignment="Top" Height="127" Width="151" Click="Button_Click" FontSize="70"/>
-        <Button x:Name="Button3" Content="*" Margin="453,500,0,0" VerticalAlignment="Top" Height="127" Width="151" Click="Button_Click" FontSize="70"/>
-        <Button x:Name="Button4" Content="/" Margin="453,627,0,0" VerticalAlignment="Top" Height="127" Width="151" Click="Button_Click" FontSize="70"/>
-        <TextBox x:Name="textBlock" HorizontalAlignment="Left" Margin="1003,458,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" Height="106" Width="157" FontSize="60" RenderTransformOrigin="1.672,-0.379" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="115,427,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="169" Width="226"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="651,427,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="169" Width="226"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1275,427,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="169" Width="226"/>
+        <Button x:Name="Button1" Content="+" Margin="326,248,0,0" VerticalAlignment="Top" Height="127" Width="151" Click="Button1_Click" FontSize="70"/>
+        <Button x:Name="Button2" Content="-" Margin="326,373,0,0" VerticalAlignment="Top" Height="127" Width="151" FontSize="70" Click="Button2_Click"/>
+        <Button x:Name="Button3" Content="*" Margin="326,500,0,0" VerticalAlignment="Top" Height="127" Width="151" Click="Button3_Click" FontSize="70"/>
+        <Button x:Name="Button4" Content="/" Margin="326,627,0,0" VerticalAlignment="Top" Height="127" Width="151" Click="Button4_Click" FontSize="70"/>
+        <TextBox x:Name="textBlock2" HorizontalAlignment="Left" Margin="797,0,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Center" Height="106" Width="157" FontSize="60" RenderTransformOrigin="1.672,-0.379" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="61,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Height="169" Width="226" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="524,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Height="169" Width="226" TextAlignment="Center" FontSize="70"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="991,454,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="169" Width="226" FontSize="70" TextAlignment="Center"/>
 
+        <StackPanel Orientation="Vertical" Margin="1189,392,10,340">
+            <RadioButton x:Name="decimalRadioButton" Content="Decimalni" FontSize="36" Checked="decimalRadioButton_Checked" IsChecked="true"/>
+            <RadioButton x:Name="hexadecimalRadioButton" Content="Heksadecimalni" FontSize="36" Checked="hexadecimalRadioButton_Checked"/>
+            <RadioButton x:Name="octalRadioButton" Content="Oktalni" FontSize="36" Checked="octalRadioButton_Checked"/>
+            <RadioButton x:Name="binaryRadioButton" Content="Binarni" FontSize="36" Checked="binaryRadioButton_Checked"/>
+        </StackPanel>
 
     </Grid>
 </Page>
